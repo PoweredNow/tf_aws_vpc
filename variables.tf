@@ -24,7 +24,7 @@ variable "private_subnets" {
 }
 
 variable "database_subnets" {
-  type        = "list"
+  type        = list(string)
   description = "A list of database subnets"
   default     = []
 }
@@ -35,7 +35,7 @@ variable "create_database_subnet_group" {
 }
 
 variable "elasticache_subnets" {
-  type        = "list"
+  type        = list(string)
   description = "A list of elasticache subnets"
   default     = []
 }
@@ -124,3 +124,4 @@ variable "elasticache_subnet_tags" {
   description = "Additional tags for the elasticache subnets"
   default     = {}
 }
+
